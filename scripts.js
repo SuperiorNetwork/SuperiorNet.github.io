@@ -1,20 +1,30 @@
-// Ensure dropdown menu toggles when clicked
 document.addEventListener('DOMContentLoaded', () => {
-    const dropdown = document.querySelectorAll('.dropdown');
-    
-    dropdown.forEach(item => {
-        item.addEventListener('click', () => {
-            item.classList.toggle('show');
-        });
+    // Select buttons
+    const downloadBtn = document.getElementById('downloadBtn');
+    const applyBtn = document.getElementById('applyBtn');
+    const aboutBtn = document.getElementById('aboutBtn');
+    const contactBtn = document.getElementById('contactBtn');
+
+    // Select sections
+    const downloadsSection = document.getElementById('downloads');
+    const applySection = document.getElementById('apply');
+    const aboutSection = document.getElementById('about');
+    const contactSection = document.getElementById('contact');
+
+    // Toggle visibility of sections on button click
+    downloadBtn.addEventListener('click', () => {
+        downloadsSection.classList.toggle('hidden');
     });
 
-    // Close the dropdown if clicked outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn') && !event.target.matches('.dropdown-content')) {
-            const dropdowns = document.querySelectorAll('.dropdown-content');
-            dropdowns.forEach(menu => {
-                menu.style.display = 'none';
-            });
-        }
-    }
+    applyBtn.addEventListener('click', () => {
+        applySection.classList.toggle('hidden');
+    });
+
+    aboutBtn.addEventListener('click', () => {
+        aboutSection.classList.toggle('hidden');
+    });
+
+    contactBtn.addEventListener('click', () => {
+        contactSection.classList.toggle('hidden');
+    });
 });
