@@ -1,29 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Select buttons
-    const downloadBtn = document.getElementById('downloadBtn');
-    const applyBtn = document.getElementById('applyBtn');
-    const aboutBtn = document.getElementById('aboutBtn');
-    const contactBtn = document.getElementById('contactBtn');
+    // Buttons
+    const downloadBtn = document.querySelector('a[href="#downloads"]');
+    const applyBtn = document.querySelector('a[href="#apply"]');
+    const aboutBtn = document.querySelector('a[href="#about"]');
+    const contactBtn = document.querySelector('a[href="#contact"]');
 
-    // Select sections
-    const downloadsSection = document.getElementById('downloads');
+    // Sections
+    const downloadSection = document.getElementById('downloads');
     const applySection = document.getElementById('apply');
     const aboutSection = document.getElementById('about');
     const contactSection = document.getElementById('contact');
 
-    // Toggle visibility of sections on button click
+    // Toggle visibility
     downloadBtn.addEventListener('click', () => {
-        downloadsSection.classList.toggle('hidden');
+        downloadSection.classList.toggle('hidden');
     });
-
+    
     applyBtn.addEventListener('click', () => {
         applySection.classList.toggle('hidden');
     });
-
+    
     aboutBtn.addEventListener('click', () => {
         aboutSection.classList.toggle('hidden');
     });
-
+    
     contactBtn.addEventListener('click', () => {
         contactSection.classList.toggle('hidden');
     });
