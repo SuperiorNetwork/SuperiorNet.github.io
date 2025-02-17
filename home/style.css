@@ -1,0 +1,808 @@
+@font-face {
+
+    font-family: 'MinecraftTen';
+
+    src: url('font.otf') format('opentype');
+
+}
+
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'MinecraftTen', Arial, sans-serif;
+
+}
+
+
+
+/* Hide Scrollbars but allow scrolling */
+
+html, body {
+
+    height: 100%;
+
+    overflow: auto;
+
+}
+
+
+
+body {
+
+    background-color: #1a1a1a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 0 20px;
+
+}
+
+
+
+/* Hide the scrollbar */
+
+::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+
+/* Sticky Transparent Navbar */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+
+    width: 100%;
+
+    background: rgba(30, 30, 30, 0.7);
+
+    backdrop-filter: blur(10px);
+
+    padding: 15px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    z-index: 1000;
+
+}
+
+
+
+.navbar a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    padding: 10px 15px;
+
+    transition: 0.3s;
+
+}
+
+
+
+.navbar a:hover {
+
+    background: rgba(255, 255, 255, 0.2);
+
+    border-radius: 5px;
+
+}
+
+
+
+/* Dropdown Menu Styling */
+
+.dropdown {
+
+    position: relative;
+
+    display: inline-block;
+
+}
+
+
+
+.dropdown button {
+
+    background-color: #333;
+
+    color: white;
+
+    font-size: 18px;
+
+    padding: 10px 20px;
+
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+
+}
+
+
+
+.dropdown button:hover {
+
+    background-color: #555;
+
+}
+
+
+
+.dropdown-content {
+
+    display: none;
+
+    position: absolute;
+
+    background-color: #333;
+
+    min-width: 160px;
+
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
+    z-index: 1;
+
+    top: 100%;
+
+    left: 0;
+
+    padding: 10px 0;
+
+    border-radius: 5px;
+
+}
+
+
+
+.dropdown-content a {
+
+    color: white;
+
+    padding: 12px 16px;
+
+    text-decoration: none;
+
+    display: block;
+
+    font-size: 16px;
+
+}
+
+
+
+.dropdown-content a:hover {
+
+    background-color: #555;
+
+}
+
+
+
+.dropdown:hover .dropdown-content {
+
+    display: block;
+
+}
+
+
+
+/* Header Image */
+
+header {
+
+    margin-top: 80px;
+
+}
+
+
+
+header img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+
+
+/* Carousel Styling */
+
+.carousel-container {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    margin-top: 20px;
+
+}
+
+
+
+.carousel {
+
+    display: flex;
+
+    width: 400%;
+
+    animation: scroll 20s infinite linear;
+
+}
+
+
+
+.carousel img {
+
+    width: 100vw;
+
+    height: auto;
+
+    object-fit: cover;
+
+}
+
+
+
+/* Infinite scrolling animation */
+
+@keyframes scroll {
+
+    0% { transform: translateX(0); }
+
+    25% { transform: translateX(0); }
+
+    30% { transform: translateX(-100vw); }
+
+    55% { transform: translateX(-100vw); }
+
+    60% { transform: translateX(-200vw); }
+
+    85% { transform: translateX(-200vw); }
+
+    90% { transform: translateX(-300vw); }
+
+    100% { transform: translateX(-300vw); }
+
+}
+
+
+
+/* Our Staff Section */
+
+.staff-section {
+
+    margin: 50px 0;
+
+    text-align: center;
+
+}
+
+
+
+.staff-section h2 {
+
+    font-size: 36px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.staff-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+}
+
+
+
+.staff-member {
+
+    background: rgba(255, 255, 255, 0.1);
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+
+    width: 200px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+/* Ensure all staff profile pictures are circular */
+
+.staff-member img {
+
+    width: 100px;
+
+    height: 100px;
+
+    border-radius: 50%; /* Restores circular shape */
+
+    margin-bottom: 10px;
+
+}
+
+
+
+/* Enhanced shimmer effect */
+
+.staff-member::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -100%;
+
+    left: -100%;
+
+    width: 250%;
+
+    height: 250%;
+
+    background: linear-gradient(
+
+        120deg,
+
+        transparent 30%,
+
+        rgba(255, 255, 255, 0.4) 50%,
+
+        transparent 70%
+
+    );
+
+    transform: rotate(30deg);
+
+    transition: all 0.5s ease;
+
+    opacity: 0;
+
+}
+
+
+
+.staff-member:hover::before {
+
+    top: 100%;
+
+    left: 100%;
+
+    opacity: 1;
+
+    transform: rotate(45deg) scale(1.2); /* Rotate and slightly zoom the shimmer */
+
+}
+
+
+
+/* Staff box hover effect: make the box get bigger */
+
+.staff-member:hover {
+
+    transform: scale(1.1); /* Slightly enlarge the box */
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow for emphasis */
+
+}
+
+
+
+/* Staff Name Colors */
+
+.staff-member:nth-child(1) p { color: #007BFF; } /* Ewoker17 (Blue) */
+
+.staff-member:nth-child(2) p { color: cyan; } /* OrcaFunny (Cyan) */
+
+.staff-member:nth-child(3) p { color: #8E44AD; } /* Ignitemare (Purple) */
+
+.staff-member:nth-child(4) p { color: #9B4DE2; } /* jj_boi (Purple) */
+
+.staff-member:nth-child(5) p { color: #C678DD; } /* chillarealone (Pink) */
+
+.staff-member:nth-child(6) p { color: #50C878; } /* Retroverse (Light Green) */
+
+
+
+/* Staff Name */
+
+.staff-member p {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #fff;
+
+}
+
+
+
+.staff-member span {
+
+    display: block;
+
+    font-size: 14px;
+
+    color: #ccc;
+
+}
+
+
+
+/* Special Tag for Website Creator */
+
+.staff-member.creator {
+
+    border: 2px solid gold;
+
+    box-shadow: 0 0 15px gold;
+
+}
+
+
+
+.staff-member.creator::after {
+
+    content: "Website Creator";
+
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: gold;
+
+    margin-top: 5px;
+
+}
+
+
+
+/* Discord Page Layout */
+
+.discord-page {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 40px 20px;
+
+    margin-top: 20px;
+
+    flex-wrap: wrap;
+
+    background: linear-gradient(rgba(26, 26, 26, 1), rgba(26, 26, 26, 0.8)), url('5.png') center/cover no-repeat;
+
+    background-size: cover;
+
+    min-height: 100vh;
+
+}
+
+
+
+/* Left Side (Reason to Join) */
+
+.left-side {
+
+    flex: 1;
+
+    padding-right: 20px;
+
+    text-align: left;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    margin-right: 20px;
+
+}
+
+
+
+/* Right Side (Discord Invite Button) */
+
+.right-side {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+    margin-left: 20px;
+
+}
+
+
+
+/* Discord Invite Button */
+
+.discord-invite-btn {
+
+    display: inline-block;
+
+    padding: 50px 80px;
+
+    background-color: #7289DA;
+
+    color: white;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    border-radius: 15px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, scale 0.3s ease;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 500px;
+
+    height: 120px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+
+.discord-invite-btn:hover {
+
+    background-color: #5c6bc0;
+
+    transform: translateY(-5px) scale(1.1);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+
+}
+
+
+
+.discord-invite-btn:active {
+
+    background-color: #4a5bb4;
+
+    transform: translateY(3px) scale(1);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+.discord-invite-btn img {
+
+    margin-right: 25px;
+
+    width: 50px;
+
+    border-radius: 10px;
+
+}
+
+
+
+/* Footer */
+
+footer {
+
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background: #0f0f0f;
+
+}
+
+
+
+/* Hide audio element */
+
+audio {
+
+    display: none;
+
+}
+
+
+
+/* Downloads Page Styles */
+
+.downloads-page {
+
+    background: #111;
+
+    color: white;
+
+    padding: 40px;
+
+    text-align: center;
+
+}
+
+
+
+.downloads-page h2 {
+
+    font-size: 40px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.downloads-page p {
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* Button for Download Void World */
+
+.download-btn-void-world {
+
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: white;
+
+    background-color: #9b4de2; /* Purple */
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    transition: all 0.3s ease;
+
+}
+
+
+
+.download-btn-void-world:hover {
+
+    background-color: #7c38b6; /* Darker Purple */
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(144, 0, 255, 0.6);
+
+}
+
+
+
+.download-btn-void-world:active {
+
+    transform: translateY(2px);
+
+    box-shadow: 0 4px 10px rgb(149, 0, 255);
+
+}
+
+
+
+/* Downloads List */
+
+.downloads-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 30px;
+
+}
+
+
+
+.download-item {
+
+    background: rgba(255, 255, 255, 0.1);
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+
+    width: 250px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+.download-item:hover {
+
+    transform: scale(1.05);
+
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+
+}
+
