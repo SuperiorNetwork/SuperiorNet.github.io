@@ -9,22 +9,40 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #f0f0f0;
-    color: #333;
+    background-image: url('minecraft-background.jpg'); /* Minecraft-themed background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 header {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner {
+    text-align: center;
+}
+
+.banner .logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.banner h1 {
+    color: #fff;
+    font-size: 36px;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    padding-top: 20px;
 }
 
 header nav ul li {
@@ -45,7 +63,7 @@ header nav ul li a:hover {
     background-color: #f44336;
 }
 
-/* Dropdown Menu */
+/* Dropdown Menu (Hidden by default) */
 .dropdown {
     position: relative;
 }
@@ -86,14 +104,14 @@ header nav ul li a:hover {
     background-color: #f1f1f1;
 }
 
-/* Show the dropdown menu when hovered */
-.dropdown:hover .dropdown-content {
+/* Show the dropdown menu when clicked */
+.dropdown.show .dropdown-content {
     display: block;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #3b3b3b;
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 100px 20px;
     text-align: center;
@@ -112,7 +130,8 @@ header nav ul li a:hover {
 
 /* Content Sections */
 .content-section {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
     padding: 60px 20px;
     text-align: center;
     margin: 20px;
@@ -147,7 +166,7 @@ header nav ul li a:hover {
 }
 
 footer {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 0;
     text-align: center;
     color: #fff;
