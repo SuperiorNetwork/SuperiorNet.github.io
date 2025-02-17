@@ -9,40 +9,32 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #f0f0f0;
-    background-image: url('minecraft-background.jpg'); /* Minecraft-themed background image */
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header .banner {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
 }
 
-header {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.banner {
-    text-align: center;
-}
-
-.banner .logo {
+header .banner .logo {
     width: 150px;
-    margin-bottom: 10px;
-}
-
-.banner h1 {
-    color: #fff;
-    font-size: 36px;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding-top: 20px;
+    margin-top: 20px;
 }
 
 header nav ul li {
@@ -50,125 +42,67 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-size: 18px;
     padding: 10px 20px;
-    display: inline-block;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    background-color: #444;
+    transition: background-color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    background-color: #f44336;
+    background-color: #555;
 }
 
-/* Dropdown Menu (Hidden by default) */
-.dropdown {
-    position: relative;
-}
-
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 18px;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.dropbtn:hover {
-    background-color: #45a049;
-}
-
-/* The dropdown container (hidden by default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-/* Show the dropdown menu when clicked */
-.dropdown.show .dropdown-content {
-    display: block;
-}
-
-/* Hero Section */
-.hero {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 100px 20px;
-    text-align: center;
-    border-radius: 10px;
-    margin: 20px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 20px;
-}
-
-/* Content Sections */
+/* Main Content Sections */
 .content-section {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #333;
-    padding: 60px 20px;
+    padding: 50px 20px;
     text-align: center;
+    background-color: #fff;
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .content-section h2 {
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
-.content-section p {
-    font-size: 20px;
-    color: #666;
+.hidden {
+    display: none;
 }
 
-.action-btn {
-    background-color: #ff5733;
-    color: white;
-    font-size: 18px;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s;
+/* Staff Section */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
-.action-btn:hover {
-    background-color: #e04e2f;
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px 0;
+.staff-member {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
-    color: #fff;
-    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.staff-member .staff-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
