@@ -1,0 +1,28 @@
+
+#bodyText{
+    padding-top: 13%;
+    font-family: arial;
+}
+.aquaP{
+    color: lightblue;
+}
+#onclick {
+    font-size: 16%;
+}
+.header {
+    background-color: #c368cf;
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding-bottom: 1%;
+    width: 100%;
+}
+body {
+    background-color: #c8a8cc;
+}
+.buttons {
+    text-decoration: none;
+    color: #2c0028;
+    padding-bottom: 99%;
+}
